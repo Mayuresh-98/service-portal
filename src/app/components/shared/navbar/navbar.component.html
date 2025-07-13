@@ -9,17 +9,17 @@
     <a *ngIf="role === 'customer'" routerLink="/user/submit-request" class="hover:underline">Submit Request</a>
     <a *ngIf="role === 'customer'" routerLink="/user/request-status" class="hover:underline">Status</a>
     <a *ngIf="role === 'admin'" routerLink="/admin/request-list" class="hover:underline">View Requests</a>
-    <a *ngIf="role === 'technician'" routerLink="/technician/assigned-jobs" class="hover:underline">View Assigned Jobs</a>
+    <a *ngIf="role === 'technician'" routerLink="/technician/assigned-jobs" class="hover:underline">View Assigned
+      Jobs</a>
   </div>
 
-  <!-- Right: Role Dropdown -->
+  <!-- Right: Role Display -->
   <div class="flex items-center space-x-2">
     <span class="text-sm">Role:</span>
-    <select (change)="setRole($event)" class="text-black p-1 rounded" value="{{ role }}">
-      <option value="admin">Admin</option>
-      <option value="technician">Technician</option>
-      <option value="customer">Customer</option>
-    </select>
     <span class="text-sm italic text-white">({{ role }})</span>
   </div>
+  <!-- Right: Logout Button -->
+  <button (click)="logout()" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+    Logout
+  </button>
 </nav>

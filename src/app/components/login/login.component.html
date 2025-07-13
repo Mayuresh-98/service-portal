@@ -1,0 +1,23 @@
+<div class="max-w-md mx-auto p-6 mt-10 bg-white rounded shadow-md">
+  <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Login</h2>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-4">
+    <div>
+      <label class="block font-medium">Username</label>
+      <input formControlName="username" class="w-full border rounded p-2" />
+    </div>
+
+    <div>
+      <label class="block font-medium">Password</label>
+      <input type="password" formControlName="password" class="w-full border rounded p-2" />
+    </div>
+
+    <div *ngIf="loginFailed" class="text-red-600 text-sm">
+      Invalid credentials. Please try again.
+    </div>
+
+    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+      Login
+    </button>
+  </form>
+</div>

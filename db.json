@@ -17,7 +17,7 @@
       "product": "printer",
       "urgency": "low",
       "description": "ink lekaage",
-      "status": "in-progress",
+      "status": "resolved",
       "assignedTo": "Bob"
     },
     {
@@ -39,6 +39,25 @@
       "description": "Display Damage",
       "status": "resolved",
       "assignedTo": "Charlie"
+    },
+    {
+      "id": "925b",
+      "name": "indra",
+      "email": "indra@gmail.com",
+      "product": "iphone",
+      "urgency": "high",
+      "description": "battery drain",
+      "status": "resolved",
+      "assignedTo": "Bob"
+    },
+    {
+      "id": "ae38",
+      "name": "indra",
+      "email": "indra@gmail.com",
+      "product": "iphone",
+      "urgency": "medium",
+      "description": "ink lekaage",
+      "status": "pending"
     }
   ],
   "technicians": [

@@ -1,4 +1,11 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<main class="container mx-auto p-4">
-</main>
+<ng-container *ngIf="isLoggedIn(); else showLogin">
+  <app-navbar></app-navbar>
+
+  <main class="container mx-auto p-4">
+    <router-outlet></router-outlet>
+  </main>
+</ng-container>
+
+<ng-template #showLogin>
+  <router-outlet></router-outlet>
+</ng-template>

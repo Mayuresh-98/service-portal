@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,11 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
-  role: string | null = localStorage.getItem('role') || 'Not selected';
+  constructor(private authService: AuthService, private router: Router) {}
+
+  get role(): string | null {
+  return this.authService.getRole();
+  }
 
   setRole(event: Event) {
     const selected = (event.target as HTMLSelectElement).value;
@@ -26,8 +31,10 @@ export class NavbarComponent {
       localStorage.setItem('role', selected);
       localStorage.removeItem('technicianName');
     }
-
-    this.role = selected;
   }
 
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }

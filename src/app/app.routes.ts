@@ -7,30 +7,35 @@ import { RequestListComponent } from './components/admin/request-list/request-li
 import { AssignedJobsComponent } from './components/technician/assigned-jobs/assigned-jobs.component';
 import { UpdateStatusComponent } from './components/technician/update-status/update-status.component';
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-    {
-        path: '', redirectTo: '/user/submit-request', pathMatch: 'full'
+    { 
+        path: '', redirectTo: '/login', pathMatch: 'full'
+    },
+    { 
+        path: 'login', component: LoginComponent 
     },
     {
-        path:'user/submit-request', component: SubmitRequestComponent
+        path: 'user/submit-request', component: SubmitRequestComponent, canActivate: [authGuard]
     },
     {
-        path:'user/request-status', component: RequestStatusComponent
+        path: 'user/request-status', component: RequestStatusComponent, canActivate: [authGuard]
     },
     {
-        path:'admin/request-list', component: RequestListComponent, canActivate:[roleGuard], data: { roles: ['admin'] }
+        path: 'admin/request-list', component: RequestListComponent, canActivate: [authGuard]
     },
     {
-        path:'admin/assign-technician', component: AssignTechnicianComponent, canActivate:[roleGuard], data: { roles: ['admin'] }
+        path: 'admin/assign-technician', component: AssignTechnicianComponent, canActivate: [authGuard]
     },
     {
-        path:'technician/assigned-jobs', component: AssignedJobsComponent, canActivate:[roleGuard], data: { roles: ['technician'] }
+        path: 'technician/assigned-jobs', component: AssignedJobsComponent, canActivate: [authGuard ]
     },
     {
-        path:'technician/update-status', component: UpdateStatusComponent, canActivate:[roleGuard], data: { roles: ['technician'] }
+        path: 'technician/update-status', component: UpdateStatusComponent, canActivate: [authGuard]
     },
     {
-        path:'**', component: NotFoundComponent
+        path: '**', component: NotFoundComponent
     }
 ];

@@ -1,1 +1,26 @@
-<p>request-status works!</p>
+<div class="max-w-4xl mx-auto mt-8 p-4 bg-white shadow rounded">
+  <h2 class="text-xl font-bold mb-4">Your Submitted Requests</h2>
+
+  <table class="w-full table-auto border-collapse border border-gray-300">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="border px-4 py-2">Product</th>
+        <th class="border px-4 py-2">Urgency</th>
+        <th class="border px-4 py-2">Status</th>
+        <th class="border px-4 py-2">Technician</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of userRequests">
+        <td class="border px-4 py-2">{{ req.product }}</td>
+        <td class="border px-4 py-2 capitalize">{{ req.urgency }}</td>
+        <td class="border px-4 py-2 capitalize">{{ req.status }}</td>
+        <td class="border px-4 py-2">{{ req.assignedTo || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="userRequests.length === 0" class="text-gray-600 mt-4">
+    You have not submitted any requests yet.
+  </p>
+</div>
