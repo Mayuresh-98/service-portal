@@ -1,0 +1,58 @@
+{
+  "requests": [
+    {
+      "id": "195b",
+      "name": "Mayuresh",
+      "email": "mayumundik98@gmail.com",
+      "product": "printer",
+      "urgency": "medium",
+      "description": "ink lekaage",
+      "status": "resolved",
+      "assignedTo": "Alice"
+    },
+    {
+      "id": "c1ff",
+      "name": "Mayuresh",
+      "email": "mayumundik98@gmail.com",
+      "product": "printer",
+      "urgency": "low",
+      "description": "ink lekaage",
+      "status": "in-progress",
+      "assignedTo": "Bob"
+    },
+    {
+      "id": "68a8",
+      "name": "Mayuresh",
+      "email": "mayumundik98@gmail.com",
+      "product": "printer",
+      "urgency": "high",
+      "description": "ink lekaage",
+      "status": "resolved",
+      "assignedTo": "Charlie"
+    },
+    {
+      "id": "f216",
+      "name": "Gaurav",
+      "email": "gauravdhanawate382@gmail.com",
+      "product": "monitor",
+      "urgency": "high",
+      "description": "Display Damage",
+      "status": "resolved",
+      "assignedTo": "Charlie"
+    }
+  ],
+  "technicians": [
+    {
+      "id": "1",
+      "name": "Alice"
+    },
+    {
+      "id": "2",
+      "name": "Bob"
+    },
+    {
+      "id": "3",
+      "name": "Charlie"
+    }
+  ]
+}

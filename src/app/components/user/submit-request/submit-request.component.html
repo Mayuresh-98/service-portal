@@ -1,1 +1,39 @@
-<p>submit-request works!</p>
+<div class="max-w-2xl mx-auto bg-white p-6 rounded shadow-md">
+  <h2 class="text-2xl font-bold mb-4 text-blue-700">Submit Service Request</h2>
+
+  <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="space-y-4">
+
+    <div>
+      <label class="block font-medium">Name</label>
+      <input formControlName="name" type="text" class="w-full border p-2 rounded" />
+    </div>
+
+    <div>
+      <label class="block font-medium">Email</label>
+      <input formControlName="email" type="email" class="w-full border p-2 rounded" />
+    </div>
+
+    <div>
+      <label class="block font-medium">Product</label>
+      <input formControlName="product" type="text" class="w-full border p-2 rounded" />
+    </div>
+
+    <div>
+      <label class="block font-medium">Urgency</label>
+      <select formControlName="urgency" class="w-full border p-2 rounded">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-medium">Issue Description</label>
+      <textarea formControlName="description" rows="4" class="w-full border p-2 rounded"></textarea>
+    </div>
+
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      Submit Request
+    </button>
+  </form>
+</div>

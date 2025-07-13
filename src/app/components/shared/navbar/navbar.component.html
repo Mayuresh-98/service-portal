@@ -6,16 +6,16 @@
 
   <!-- Center: Links -->
   <div class="flex items-center space-x-4">
-    <a routerLink="/user/submit-request" class="hover:underline">Submit Request</a>
-    <a routerLink="/user/request-status" class="hover:underline">Status</a>
-    <a routerLink="/admin/request-list" class="hover:underline">Admin</a>
-    <a routerLink="/technician/assigned-jobs" class="hover:underline">Technician</a>
+    <a *ngIf="role === 'customer'" routerLink="/user/submit-request" class="hover:underline">Submit Request</a>
+    <a *ngIf="role === 'customer'" routerLink="/user/request-status" class="hover:underline">Status</a>
+    <a *ngIf="role === 'admin'" routerLink="/admin/request-list" class="hover:underline">View Requests</a>
+    <a *ngIf="role === 'technician'" routerLink="/technician/assigned-jobs" class="hover:underline">View Assigned Jobs</a>
   </div>
 
   <!-- Right: Role Dropdown -->
   <div class="flex items-center space-x-2">
     <span class="text-sm">Role:</span>
-    <select (change)="setRole($event)" class="text-black p-1 rounded">
+    <select (change)="setRole($event)" class="text-black p-1 rounded" value="{{ role }}">
       <option value="admin">Admin</option>
       <option value="technician">Technician</option>
       <option value="customer">Customer</option>

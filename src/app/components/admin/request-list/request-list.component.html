@@ -1,1 +1,46 @@
-<p>request-list works!</p>
+<div class="max-w-6xl mx-auto p-6">
+  <h2 class="text-2xl font-bold text-blue-700 mb-4">Service Requests</h2>
+
+  <table class="w-full table-auto border-collapse border border-gray-300">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="border px-4 py-2">#</th>
+        <th class="border px-4 py-2">Name</th>
+        <th class="border px-4 py-2">Email</th>
+        <th class="border px-4 py-2">Product</th>
+        <th class="border px-4 py-2">Urgency</th>
+        <th class="border px-4 py-2">Status</th>
+        <th class="border px-4 py-2">Assigned To</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let req of requests; let i = index">
+        <td class="border px-4 py-2">{{ i + 1 }}</td>
+        <td class="border px-4 py-2">{{ req.name }}</td>
+        <td class="border px-4 py-2">{{ req.email }}</td>
+        <td class="border px-4 py-2">{{ req.product }}</td>
+        <td class="border px-4 py-2">
+          <span [ngClass]="{
+            'text-green-700': req.urgency === 'low',
+            'text-yellow-600': req.urgency === 'medium',
+            'text-red-600': req.urgency === 'high'
+          }">{{ req.urgency }}</span>
+        </td>
+        <td class="border px-4 py-2 capitalize">{{ req.status }}</td>
+        <td class="border px-4 py-2">
+          <ng-container *ngIf="req.status === 'pending'; else assigned">
+            <select #tech (change)="assignTechnician(req.id, tech.value)" class="p-1 border rounded text-black">
+              <option value="">Assign</option>
+              <option *ngFor="let tech of technicians" [value]="tech">{{ tech }}</option>
+            </select>
+
+          </ng-container>
+          <ng-template #assigned>
+            {{ req.assignedTo }}
+          </ng-template>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
