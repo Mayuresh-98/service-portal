@@ -8,6 +8,7 @@
         <th class="border px-4 py-2">Name</th>
         <th class="border px-4 py-2">Email</th>
         <th class="border px-4 py-2">Product</th>
+        <th class="border px-4 py-2">Description</th>
         <th class="border px-4 py-2">Urgency</th>
         <th class="border px-4 py-2">Status</th>
         <th class="border px-4 py-2">Assigned To</th>
@@ -19,6 +20,7 @@
         <td class="border px-4 py-2">{{ req.name }}</td>
         <td class="border px-4 py-2">{{ req.email }}</td>
         <td class="border px-4 py-2">{{ req.product }}</td>
+        <td class="border px-4 py-2">{{ req.description }}</td>
         <td class="border px-4 py-2">
           <span [ngClass]="{
             'text-green-700': req.urgency === 'low',

@@ -67,7 +67,8 @@
       "product": "Bike",
       "urgency": "high",
       "description": "fuel leakage",
-      "status": "pending"
+      "status": "resolved",
+      "assignedTo": "Jessica"
     }
   ],
   "technicians": [

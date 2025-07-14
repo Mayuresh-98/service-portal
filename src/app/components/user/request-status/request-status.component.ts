@@ -25,6 +25,7 @@ export class RequestStatusComponent {
   loadUserRequests() {
     this.requestService.getAllRequests().subscribe((all) => {
       this.userRequests = all.filter(req => req.name === this.userName);
+      console.log(this.userRequests);
     });
   }
 }

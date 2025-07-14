@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ServiceRequest } from '../models/request.model';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,8 +35,15 @@ export class RequestService {
     return this.http.patch<ServiceRequest>(`${this.baseUrl}/requests/${id}`, { status });
   }
 
-  // Get Technicians
+  // Get Technicians updated function (rxjs)
   getTechnicians(): Observable<{ id: number, name: string }[]> {
-    return this.http.get<{ id: number, name: string }[]>(`${this.baseUrl}/technicians`);
-  }
+  return this.http.get<{ id: number, name: string, role: string }[]>(`${this.baseUrl}/accounts`)
+    .pipe(
+      map(accounts => accounts
+        .filter(account => account.role === 'technician')
+        .map(({ id, name }) => ({ id, name }))
+      )
+    );
+}
+
 }

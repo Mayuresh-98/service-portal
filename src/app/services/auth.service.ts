@@ -34,6 +34,7 @@ export class AuthService {
     if(user) {
       localStorage.setItem('role', user.role);
       localStorage.setItem('username', user.username);
+      localStorage.setItem('name',user.name);
       if (user.role === 'technician' && user.name) {
         localStorage.setItem('technicianName', user.name);
       }
@@ -62,6 +63,6 @@ export class AuthService {
   }
 
   getUserName(): string | null {
-    return localStorage.getItem('userName');
+    return localStorage.getItem('username');
   }
 }
