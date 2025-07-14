@@ -26,7 +26,11 @@ export class LoginComponent {
     });
   }
 
-  onSubmit() {
+  ngOnInit() {
+    this.authService.loadUsers();
+  }
+
+  onLogin() {
     const { username, password } = this.loginForm.value;
     const success = this.authService.login(username, password);
     if (success) {
@@ -42,5 +46,9 @@ export class LoginComponent {
     } else {
       this.loginFailed = true;
     }
+  }
+
+  register(){
+    this.router.navigate(['register']);
   }
 }

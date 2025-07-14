@@ -57,6 +57,16 @@
       "product": "iphone",
       "urgency": "medium",
       "description": "ink lekaage",
+      "status": "resolved",
+      "assignedTo": "Charlie"
+    },
+    {
+      "id": "7e79",
+      "name": "john",
+      "email": "john@gmail.com",
+      "product": "Bike",
+      "urgency": "high",
+      "description": "fuel leakage",
       "status": "pending"
     }
   ],
@@ -72,6 +82,54 @@
     {
       "id": "3",
       "name": "Charlie"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Admin",
+      "username": "admin",
+      "role": "admin",
+      "password": "admin123",
+      "email": "admin@gmail.com"
+    },
+    {
+      "username": "user",
+      "password": "user123",
+      "role": "customer"
+    },
+    {
+      "username": "tech-alice",
+      "password": "alice123",
+      "role": "technician",
+      "name": "Alice"
+    },
+    {
+      "username": "tech-bob",
+      "password": "bob123",
+      "role": "technician",
+      "name": "Bob"
+    },
+    {
+      "username": "tech-charlie",
+      "password": "charlie123",
+      "role": "technician",
+      "name": "Charlie"
+    },
+    {
+      "id": "808d",
+      "name": "John",
+      "username": "john",
+      "email": "john@gmail.com",
+      "role": "customer",
+      "password": "john123"
+    },
+    {
+      "id": "6063",
+      "name": "Jessica",
+      "username": "jessica",
+      "email": "jessica@gmail.com",
+      "role": "technician",
+      "password": "jessica123"
     }
   ]
 }

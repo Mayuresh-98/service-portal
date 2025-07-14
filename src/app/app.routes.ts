@@ -9,6 +9,7 @@ import { UpdateStatusComponent } from './components/technician/update-status/upd
 import { NotFoundComponent } from './components/shared/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
+import { RegisterComponent } from './components/register/register.component';
 
 export const routes: Routes = [
     { 
@@ -16,6 +17,9 @@ export const routes: Routes = [
     },
     { 
         path: 'login', component: LoginComponent 
+    },
+    {
+        path: 'register', component: RegisterComponent
     },
     {
         path: 'user/submit-request', component: SubmitRequestComponent, canActivate: [authGuard]
