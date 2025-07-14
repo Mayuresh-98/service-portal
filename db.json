@@ -1,136 +1,89 @@
 {
   "requests": [
     {
-      "id": "195b",
+      "id": "7ff7",
       "name": "Mayuresh",
-      "email": "mayumundik98@gmail.com",
-      "product": "printer",
-      "urgency": "medium",
-      "description": "ink lekaage",
-      "status": "resolved",
+      "email": "mayuresh@gmail.com",
+      "username": "mayuresh",
+      "product": "HP Laptop",
+      "urgency": "high",
+      "description": "Laptop is overheating and randomly shutting down.",
+      "status": "assigned",
       "assignedTo": "Alice"
     },
     {
-      "id": "c1ff",
+      "id": "9665",
       "name": "Mayuresh",
-      "email": "mayumundik98@gmail.com",
-      "product": "printer",
-      "urgency": "low",
-      "description": "ink lekaage",
-      "status": "resolved",
-      "assignedTo": "Bob"
-    },
-    {
-      "id": "68a8",
-      "name": "Mayuresh",
-      "email": "mayumundik98@gmail.com",
-      "product": "printer",
-      "urgency": "high",
-      "description": "ink lekaage",
-      "status": "resolved",
-      "assignedTo": "Charlie"
-    },
-    {
-      "id": "f216",
-      "name": "Gaurav",
-      "email": "gauravdhanawate382@gmail.com",
-      "product": "monitor",
-      "urgency": "high",
-      "description": "Display Damage",
-      "status": "resolved",
-      "assignedTo": "Charlie"
-    },
-    {
-      "id": "925b",
-      "name": "indra",
-      "email": "indra@gmail.com",
-      "product": "iphone",
-      "urgency": "high",
-      "description": "battery drain",
-      "status": "resolved",
-      "assignedTo": "Bob"
-    },
-    {
-      "id": "ae38",
-      "name": "indra",
-      "email": "indra@gmail.com",
-      "product": "iphone",
+      "email": "mayuresh@gmail.com",
+      "username": "mayuresh",
+      "product": "Windows 11 PC",
       "urgency": "medium",
-      "description": "ink lekaage",
-      "status": "resolved",
-      "assignedTo": "Charlie"
+      "description": "Need help setting up Microsoft Office and antivirus.",
+      "status": "assigned",
+      "assignedTo": "Bob"
     },
     {
-      "id": "7e79",
-      "name": "john",
-      "email": "john@gmail.com",
-      "product": "Bike",
+      "id": "b7ea",
+      "name": "Riya",
+      "email": "riya@gmail.com",
+      "username": "riya",
+      "product": "Canon Printer",
+      "urgency": "medium",
+      "description": "Printer is not connecting via Wi-Fi.",
+      "status": "pending"
+    },
+    {
+      "id": "7ecf",
+      "name": "Riya",
+      "email": "riya@gmail.com",
+      "username": "riya",
+      "product": "Dell Laptop",
       "urgency": "high",
-      "description": "fuel leakage",
-      "status": "resolved",
-      "assignedTo": "Jessica"
-    }
-  ],
-  "technicians": [
-    {
-      "id": "1",
-      "name": "Alice"
-    },
-    {
-      "id": "2",
-      "name": "Bob"
-    },
-    {
-      "id": "3",
-      "name": "Charlie"
+      "description": "Laptop won’t boot after Windows update.",
+      "status": "assigned",
+      "assignedTo": "Alice"
     }
   ],
   "accounts": [
     {
+      "id": "5025",
       "name": "Admin",
       "username": "admin",
+      "email": "admin@gmail.com",
       "role": "admin",
-      "password": "admin123",
-      "email": "admin@gmail.com"
+      "password": "admin123"
     },
     {
-      "username": "user",
-      "password": "user123",
-      "role": "customer"
-    },
-    {
-      "username": "tech-alice",
-      "password": "alice123",
+      "id": "6071",
+      "name": "Alice",
+      "username": "alice",
+      "email": "alice@gmail.com",
       "role": "technician",
-      "name": "Alice"
+      "password": "alice123"
     },
     {
-      "username": "tech-bob",
-      "password": "bob123",
+      "id": "3874",
+      "name": "Bob",
+      "username": "bob",
+      "email": "bob@gmail.com",
       "role": "technician",
-      "name": "Bob"
+      "password": "bob123"
     },
     {
-      "username": "tech-charlie",
-      "password": "charlie123",
-      "role": "technician",
-      "name": "Charlie"
-    },
-    {
-      "id": "808d",
-      "name": "John",
-      "username": "john",
-      "email": "john@gmail.com",
+      "id": "a50c",
+      "name": "Mayuresh",
+      "username": "mayuresh",
+      "email": "mayuresh@gmail.com",
       "role": "customer",
-      "password": "john123"
+      "password": "mayuresh123"
     },
     {
-      "id": "6063",
-      "name": "Jessica",
-      "username": "jessica",
-      "email": "jessica@gmail.com",
-      "role": "technician",
-      "password": "jessica123"
+      "id": "6d23",
+      "name": "Riya",
+      "username": "riya",
+      "email": "riya@gmail.com",
+      "role": "customer",
+      "password": "riya123"
     }
   ]
 }

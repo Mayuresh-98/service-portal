@@ -18,13 +18,13 @@ export class RequestStatusComponent {
   constructor(private requestService: RequestService, private authService: AuthService) {}
 
   ngOnInit() {
-    this.userName = this.authService.getUserName() || '';
+    this.userName = this.authService.getUserName() || '';  //temporary fix
     this.loadUserRequests();
   }
 
   loadUserRequests() {
     this.requestService.getAllRequests().subscribe((all) => {
-      this.userRequests = all.filter(req => req.name === this.userName);
+      this.userRequests = all.filter(req => req.username === this.userName);
       console.log(this.userRequests);
     });
   }

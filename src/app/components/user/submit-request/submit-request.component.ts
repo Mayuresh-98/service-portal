@@ -12,11 +12,15 @@ import { RequestService } from '../../../services/request.service';
 })
 export class SubmitRequestComponent {
   requestForm: FormGroup;
+  name: string | null = localStorage.getItem('name') || '';
+  email: string | null = localStorage.getItem('email') || '';
+  username: string | null = localStorage.getItem('username') || '';
 
   constructor(private fb: FormBuilder, private requestService: RequestService) {
     this.requestForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      name: [this.name, Validators.required],
+      email: [this.email, [Validators.required, Validators.email]],
+      username: [this.username, Validators.required],
       product: ['', Validators.required],
       urgency: ['medium', Validators.required],
       description: ['', [Validators.required, Validators.minLength(10)]]

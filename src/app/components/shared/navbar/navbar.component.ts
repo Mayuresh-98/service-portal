@@ -18,6 +18,10 @@ export class NavbarComponent {
   return this.authService.getRole();
   }
 
+  get name(): string | null {
+    return this.authService.getName();
+  }
+
   setRole(event: Event) {
     const selected = (event.target as HTMLSelectElement).value;
 

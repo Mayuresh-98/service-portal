@@ -4,13 +4,15 @@
   <form [formGroup]="requestForm" (ngSubmit)="onSubmit()" class="space-y-4">
 
     <div>
-      <label class="block font-medium">Name</label>
-      <input formControlName="name" type="text" class="w-full border p-2 rounded" />
+      <p class="block font-medium">Name : {{ name }}</p>
     </div>
 
     <div>
-      <label class="block font-medium">Email</label>
-      <input formControlName="email" type="email" class="w-full border p-2 rounded" />
+      <p class="block font-medium">Email : {{ email }}</p>
+    </div>
+
+    <div>
+      <p class="block font-medium">Username : {{ username }}</p>
     </div>
 
     <div>
