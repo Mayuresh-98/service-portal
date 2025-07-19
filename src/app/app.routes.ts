@@ -10,10 +10,14 @@ import { NotFoundComponent } from './components/shared/not-found/not-found.compo
 import { LoginComponent } from './components/login/login.component';
 import { authGuard } from './guards/auth.guard';
 import { RegisterComponent } from './components/register/register.component';
+import { HomePageComponent } from './components/shared/home-page/home-page.component';
 
 export const routes: Routes = [
     { 
-        path: '', redirectTo: '/login', pathMatch: 'full'
+        path: '', redirectTo: '/home', pathMatch: 'full'
+    },
+    {
+        path: 'home', component: HomePageComponent
     },
     { 
         path: 'login', component: LoginComponent 

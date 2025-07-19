@@ -8,7 +8,7 @@
       "product": "HP Laptop",
       "urgency": "high",
       "description": "Laptop is overheating and randomly shutting down.",
-      "status": "assigned",
+      "status": "resolved",
       "assignedTo": "Alice"
     },
     {
@@ -30,7 +30,8 @@
       "product": "Canon Printer",
       "urgency": "medium",
       "description": "Printer is not connecting via Wi-Fi.",
-      "status": "pending"
+      "status": "assigned",
+      "assignedTo": "Bob"
     },
     {
       "id": "7ecf",
@@ -40,6 +41,17 @@
       "product": "Dell Laptop",
       "urgency": "high",
       "description": "Laptop won’t boot after Windows update.",
+      "status": "in-progress",
+      "assignedTo": "Alice"
+    },
+    {
+      "id": "dbe4",
+      "name": "Indrajit",
+      "email": "indra@gmail.com",
+      "username": "indra",
+      "product": "Wifi Speed",
+      "urgency": "medium",
+      "description": "wifi speed is keeps droping when i connect 3 or more devices",
       "status": "assigned",
       "assignedTo": "Alice"
     }
@@ -84,6 +96,14 @@
       "email": "riya@gmail.com",
       "role": "customer",
       "password": "riya123"
+    },
+    {
+      "id": "b81f",
+      "name": "Indrajit",
+      "username": "indra",
+      "email": "indra@gmail.com",
+      "role": "customer",
+      "password": "indra123"
     }
   ]
 }

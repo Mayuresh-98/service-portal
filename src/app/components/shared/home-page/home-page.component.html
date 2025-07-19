@@ -1,0 +1,126 @@
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-4">Welcome to TechCare Service Portal</h1>
+        <p class="text-center text-gray-600 mb-8 text-lg">
+            Your one-stop solution for all your computer, software, and networking needs.<br />
+            Whether you're a student, employee, or small business owner — we’re here to help!
+        </p>
+
+        <!-- Why Choose Us -->
+        <div class="text-center mb-12">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-3">Why Choose Us?</h2>
+            <ul class="text-gray-700 space-y-1">
+                <li>✔ Trusted technicians</li>
+                <li>✔ Quick turnaround</li>
+                <li>✔ Affordable pricing</li>
+                <li>✔ 24/7 remote support</li>
+            </ul>
+        </div>
+
+        <!-- Popular Services -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6">Popular Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">Laptop/PC Repair</h3>
+                    <p class="text-gray-600 text-sm">Fixing hardware/software issues for computers</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">Antivirus Installation</h3>
+                    <p class="text-gray-600 text-sm">Protect your system with up-to-date antivirus</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">Software Setup</h3>
+                    <p class="text-gray-600 text-sm">Installation and configuration of key apps</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">Wi-Fi Troubleshooting</h3>
+                    <p class="text-gray-600 text-sm">Fix slow or disconnected internet problems</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">Printer Fixes</h3>
+                    <p class="text-gray-600 text-sm">Installation and troubleshooting printers</p>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h3 class="font-semibold text-lg text-gray-800">OS Reinstallation</h3>
+                    <p class="text-gray-600 text-sm">Clean installation of Windows/Linux/macOS</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="space-y-12">
+            <!-- Hardware Support -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🛠️ Hardware Support</h2>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li><strong>Computer Repairs:</strong> Fix hardware issues like power/display/overheating</li>
+                    <li><strong>Printer Setup & Troubleshooting:</strong> Set up or fix printer & scanner problems</li>
+                    <li><strong>Hardware Upgrades:</strong> Upgrade RAM, SSDs, GPUs for better performance</li>
+                </ul>
+            </div>
+
+            <!-- Software Services -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🧑‍💼 Software Services</h2>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li><strong>OS Installation:</strong> Setup Windows, Linux, macOS</li>
+                    <li><strong>Software Installation:</strong> MS Office, Adobe, Antivirus etc.</li>
+                    <li><strong>Driver Installation:</strong> Update and install system drivers</li>
+                </ul>
+            </div>
+
+            <!-- Network Services -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🌐 Network & Connectivity</h2>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li><strong>Wi-Fi Troubleshooting:</strong> Fix signal and connectivity issues</li>
+                    <li><strong>Router Setup:</strong> Secure your home or office network</li>
+                    <li><strong>LAN/WAN Configuration:</strong> Support for enterprise networks</li>
+                </ul>
+            </div>
+
+            <!-- Security Services -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🔒 Security & Data</h2>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li><strong>Virus/Malware Removal:</strong> Clean infected systems</li>
+                    <li><strong>Data Backup & Recovery:</strong> Recover lost files or crash data</li>
+                    <li><strong>Cybersecurity Check:</strong> System vulnerability audits</li>
+                </ul>
+            </div>
+
+            <!-- Training & Support -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🧠 Training & Support</h2>
+                <ul class="list-disc pl-6 text-gray-700">
+                    <li><strong>Software Training:</strong> Personalized sessions on Excel, Photoshop etc.</li>
+                    <li><strong>Remote Tech Support:</strong> Fast issue resolution without visit</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 text-center">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4">Ready to Get Started?</h2>
+            <div class="flex justify-center space-x-4">
+                <a *ngIf="role === 'customer'" routerLink="/user/submit-request"
+                    class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Submit
+                    Request</a>
+                <a *ngIf="role === 'customer'" routerLink="/user/request-status"
+                    class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Status</a>
+                <a *ngIf="role === 'admin'" routerLink="/admin/request-list"
+                    class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">View
+                    Requests</a>
+                <a *ngIf="role === 'technician'" routerLink="/technician/assigned-jobs"
+                    class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">View
+                    Assigned
+                    Jobs</a>
+                <a *ngIf="!role" routerLink="/login" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
