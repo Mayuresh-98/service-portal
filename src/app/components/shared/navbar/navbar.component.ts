@@ -36,7 +36,9 @@ export class NavbarComponent {
       localStorage.removeItem('technicianName');
     }
   }
-
+  currentPage(): string {
+    return this.router.url;
+  }
   logout() {
     this.authService.logout();
     this.router.navigate(['/login']);
