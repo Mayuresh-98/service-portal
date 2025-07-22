@@ -12,5 +12,5 @@ export const roleGuard: CanActivateFn = (route, state) => {
     return true;
   }
   
-  return router.parseUrl('/user/submit-request');
+  return router.parseUrl('/home');
 };

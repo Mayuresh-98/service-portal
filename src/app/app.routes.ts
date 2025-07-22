@@ -26,22 +26,22 @@ export const routes: Routes = [
         path: 'register', component: RegisterComponent
     },
     {
-        path: 'user/submit-request', component: SubmitRequestComponent, canActivate: [authGuard]
+        path: 'user/submit-request', component: SubmitRequestComponent, canActivate: [authGuard, roleGuard], data: { roles: ['customer'] }
     },
     {
-        path: 'user/request-status', component: RequestStatusComponent, canActivate: [authGuard]
+        path: 'user/request-status', component: RequestStatusComponent, canActivate: [authGuard, roleGuard], data: { roles: ['customer'] }
     },
     {
-        path: 'admin/request-list', component: RequestListComponent, canActivate: [authGuard]
+        path: 'admin/request-list', component: RequestListComponent, canActivate: [authGuard, roleGuard], data: { roles: ['admin'] }
     },
     {
-        path: 'admin/assign-technician', component: AssignTechnicianComponent, canActivate: [authGuard]
+        path: 'admin/assign-technician', component: AssignTechnicianComponent, canActivate: [authGuard, roleGuard], data: { roles: ['admin'] }
     },
     {
-        path: 'technician/assigned-jobs', component: AssignedJobsComponent, canActivate: [authGuard ]
+        path: 'technician/assigned-jobs', component: AssignedJobsComponent, canActivate: [authGuard, roleGuard ], data: { roles: ['technician'] }
     },
     {
-        path: 'technician/update-status', component: UpdateStatusComponent, canActivate: [authGuard]
+        path: 'technician/update-status', component: UpdateStatusComponent, canActivate: [authGuard, roleGuard], data: { roles: ['technician'] }
     },
     {
         path: '**', component: NotFoundComponent

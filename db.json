@@ -19,7 +19,7 @@
       "product": "Windows 11 PC",
       "urgency": "medium",
       "description": "Need help setting up Microsoft Office and antivirus.",
-      "status": "assigned",
+      "status": "resolved",
       "assignedTo": "Bob"
     },
     {
@@ -30,7 +30,7 @@
       "product": "Canon Printer",
       "urgency": "medium",
       "description": "Printer is not connecting via Wi-Fi.",
-      "status": "assigned",
+      "status": "resolved",
       "assignedTo": "Bob"
     },
     {
@@ -41,7 +41,7 @@
       "product": "Dell Laptop",
       "urgency": "high",
       "description": "Laptop won’t boot after Windows update.",
-      "status": "in-progress",
+      "status": "resolved",
       "assignedTo": "Alice"
     },
     {
@@ -52,8 +52,19 @@
       "product": "Wifi Speed",
       "urgency": "medium",
       "description": "wifi speed is keeps droping when i connect 3 or more devices",
-      "status": "assigned",
+      "status": "resolved",
       "assignedTo": "Alice"
+    },
+    {
+      "id": "a8be",
+      "name": "Riya",
+      "email": "riya@gmail.com",
+      "username": "riya",
+      "product": "HP Laptop",
+      "urgency": "medium",
+      "description": "I wanted to upgrade the ssd of my laptop ",
+      "status": "resolved",
+      "assignedTo": "John"
     }
   ],
   "accounts": [
@@ -104,6 +115,14 @@
       "email": "indra@gmail.com",
       "role": "customer",
       "password": "indra123"
+    },
+    {
+      "id": "9b75",
+      "name": "John",
+      "username": "john",
+      "email": "john@gmail.com",
+      "role": "technician",
+      "password": "john123"
     }
   ]
 }
