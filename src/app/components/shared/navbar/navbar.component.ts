@@ -22,20 +22,21 @@ export class NavbarComponent {
     return this.authService.getName();
   }
 
-  setRole(event: Event) {
-    const selected = (event.target as HTMLSelectElement).value;
+  // setRole(event: Event) {
+  //   const selected = (event.target as HTMLSelectElement).value;
 
-    if (selected === 'technician') {
-      const techName = prompt('Enter technician name (e.g. Alice, Bob):');
-      if (techName) {
-        localStorage.setItem('role', 'technician');
-        localStorage.setItem('technicianName', techName);
-      }
-    } else {
-      localStorage.setItem('role', selected);
-      localStorage.removeItem('technicianName');
-    }
-  }
+  //   if (selected === 'technician') {
+  //     const techName = prompt('Enter technician name (e.g. Alice, Bob):');
+  //     if (techName) {
+  //       localStorage.setItem('role', 'technician');
+  //       localStorage.setItem('technicianName', techName);
+  //     }
+  //   } else {
+  //     localStorage.setItem('role', selected);
+  //     localStorage.removeItem('technicianName');
+  //   }
+  // }
+  
   currentPage(): string {
     return this.router.url;
   }

@@ -65,6 +65,17 @@
       "description": "I wanted to upgrade the ssd of my laptop ",
       "status": "resolved",
       "assignedTo": "John"
+    },
+    {
+      "id": "4abb",
+      "name": "Mayuresh",
+      "email": "mayuresh@gmail.com",
+      "username": "mayuresh",
+      "product": "Headset",
+      "urgency": "medium",
+      "description": "Headset mic is not working on call\n",
+      "status": "resolved",
+      "assignedTo": "Atharva"
     }
   ],
   "accounts": [
@@ -123,6 +134,14 @@
       "email": "john@gmail.com",
       "role": "technician",
       "password": "john123"
+    },
+    {
+      "id": "bf28",
+      "name": "Atharva",
+      "username": "atharva",
+      "email": "atharva@gmail.com",
+      "role": "technician",
+      "password": "atharva123"
     }
   ]
 }

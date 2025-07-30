@@ -7,7 +7,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -39,10 +39,12 @@ export class RegisterComponent {
         error: (err) => {
           console.error('Error registering account:', err);
           alert('Something went wrong. Please try again later.');
+          this.registerFailed = true;
         }
       });
     }else {
       alert('Please fill out all required fields correctly.');
+      this.registerFailed = true;
     }
   }
 }
